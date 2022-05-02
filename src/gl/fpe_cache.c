@@ -260,9 +260,6 @@ void fpe_AddProgramPSA(GLuint program, fpe_state_t* state)
 {
     if(!psa)
         return;
-    // if state contains custom vertex of fragment shader, then ignore
-    if(state->vertex_prg_enable || state->fragment_prg_enable)
-        return;
     psa->dirty = 1;
     psa_t *p = (psa_t*)calloc(1, sizeof(psa_t));
     memcpy(&p->state, state, sizeof(p->state));
