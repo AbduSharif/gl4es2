@@ -100,9 +100,6 @@ LOCAL_CFLAGS += -DDEFAULT_ES=2
 //TODO: maybe temporary?
 LOCAL_CFLAGS += -Wno-typedef-redefinition -Wno-dangling-else
 LOCAL_CFLAGS += -Dasm=__asm__ -Dvolatile=__volatile__
-LOCAL_CFLAGS += -DCMAKE_POLICY_DEFAULT_CMP0069=NEW
-LOCAL_CFLAGS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
-LOCAL_LDFLAGS += -flto=thin -plugin-opt=-emulated-tls -fuse-ld=lld
 
 LOCAL_LDLIBS := -llog
 #building as a shared lib
